@@ -7,11 +7,41 @@
 
 <div class="homepage_container">
 
-    <label for="datePicker">Enter the date of the reservation you would like</label>
+    <form>
+        <label for="datePicker">Enter the date of the reservation you would like</label>
+        <input type="date" id="datePicker" name="trip-start">
 
-    <input type="date" id="datePicker" name="trip-start">
+        <div>Enter an optimal time range and we will only show appointments in that range</div>
+
+        <!-- <label for="start-time">Start Time: </label>
+        <input id="start-time" type="time" name="start-time" value="08:00" step="1800">
+
+        <label for="end-time">End Time: </label>
+        <input id="end-time" type="time" name="end-time" value="11:00" step="1800"> -->
+        
+        <label>Start Time: </label>
+        <select class="hours"></select>
+        <select class="minutes"></select>
+        <select id="am-pm">
+            <option>AM</option>
+            <option>PM</option>
+        </select>
+
+        <label>End Time: </label>
+        <select class="hours"></select>
+        <select class="minutes"></select>
+        <select id="am-pm">
+            <option>AM</option>
+            <option>PM</option>
+        </select>
+
+        <div class="search-btn-div">
+            <button>Search</button>
+        </div>
+
+        </form>
     
-    
+
 </div>
 
 <!-- value="2018-07-22" -->
