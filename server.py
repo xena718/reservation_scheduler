@@ -15,6 +15,17 @@ def homepage():
 
     return render_template("homepage.html")
 
+@app.route("/search-input-form")
+def search():
+    """search and return time slots.  """
+    selected_date = request.form.get("reservation-date")
+    start_hour = request.form.get("start_hour")
+
+    return render_template("search_results.html")
+
+
+
+
 
 
 if __name__ == "__main__":

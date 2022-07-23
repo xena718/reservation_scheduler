@@ -7,9 +7,9 @@
 
 <div class="homepage_container">
 
-    <form>
+    <form action ="/search-input-form">
         <label for="datePicker">Enter the date of the reservation you would like</label>
-        <input type="date" id="datePicker" name="trip-start">
+        <input type="date" id="datePicker" name="reservation-date">
 
         <div>Enter an optimal time range and we will only show appointments in that range</div>
 
@@ -20,23 +20,23 @@
         <input id="end-time" type="time" name="end-time" value="11:00" step="1800"> -->
         
         <label>Start Time: </label>
-        <select class="hours"></select>
-        <select class="minutes"></select>
-        <select id="am-pm">
+        <select name="start-hour" class="hours"></select>
+        <select name="start-minute" class="minutes"></select>
+        <select name="start-am-or-pm" id="am-pm">
             <option>AM</option>
             <option>PM</option>
         </select>
 
         <label>End Time: </label>
-        <select class="hours"></select>
-        <select class="minutes"></select>
-        <select id="am-pm">
+        <select name="end-hour" class="hours"></select>
+        <select name="end-minute" class="minutes"></select>
+        <select name="end-am-or-pm" id="am-pm">
             <option>AM</option>
             <option>PM</option>
         </select>
 
-        <div class="search-btn-div">
-            <button>Search</button>
+        <div class="search-submit-div">
+            <input type="submit" value="Search">
         </div>
 
         </form>
