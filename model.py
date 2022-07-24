@@ -31,6 +31,11 @@ class Reservation(db.Model):
 
     def __repr__(self):
         return f"<user_id ={self.user_id} and reservation_start_time={self.reservation_start_time}"
+    def to_dict(self):
+        return {
+            "reservation_id": self.reservation_id,
+            "reservation_start_time": self.reservation_start_time.isoformat(),
+        }
 
 
 def connect_to_db(flask_app, db_uri="postgresql:///scheduler", echo=True):
